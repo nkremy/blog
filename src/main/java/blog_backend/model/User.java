@@ -34,9 +34,12 @@ public class User {
     @Column(nullable = false)
     private String pass;
 
-    private String photo_prpfile;
+    public String photo_propfile;
 
     @OneToMany(mappedBy = "user")
     private List<Post> posts;
     
+    public void setProfile(String g){
+        this.photo_propfile = g;
+    }
 }
